@@ -4,7 +4,7 @@ using ClusterManagement.Models;
 using ClusterManagement.Repositories;
 namespace ClusterManagement.Services;
 
-class ClusterService : IClusterService
+public class ClusterService : IClusterService
 {
     private readonly IClusterRepository _clusterRepository;
     public ClusterService(IClusterRepository clusterRepository)

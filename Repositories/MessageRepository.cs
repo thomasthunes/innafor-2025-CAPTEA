@@ -1,4 +1,5 @@
 using ClusterManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClusterManagement.Repositories;
 
@@ -9,26 +10,26 @@ public class MessageRepository : IMessageRepository
     {
         _context = context;
     }
-    public Message GetMessageById(Guid id)
+    public async Task<Message> GetMessageByIdAsync(Guid id)
     {
-        return _context.Messages.Find(id) ?? throw new KeyNotFoundException($"Message with ID {id} not found.");
+        return await _context.Messages.FindAsync(id); 
     }
-    public List<Message> GetMessagesTo(Guid id)
+    public async Task<List<Message>> GetMessagesToAsync(Guid id)
     {
-        return _context.Messages.Where(m => m.To == id).ToList();
+        return await _context.Messages.Where(m => m.To == id).ToListAsync();
     }
-    public List<Message> GetMessagesFrom(Guid id)
+    public async Task<List<Message>> GetMessagesFromAsync(Guid id)
     {
-        return _context.Messages.Where(m => m.From == id).ToList();
+        return await _context.Messages.Where(m => m.From == id).ToListAsync();
     }
-    public void SendMessage(Message message)
+    public async Task SendMessageAsync(Message message)
     {
         _context.Messages.Add(message);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
     }
-    public List<Message> GetMessagesToAbout(Guid to, Guid about)
+    public async Task<List<Message>> GetMessagesToAboutAsync(Guid to, Guid about)
     {
-        return _context.Messages.Where(m => m.To == to && m.About == about).ToList();
+        return await _context.Messages.Where(m => m.To == to && m.About == about).ToListAsync();
     }
 
 

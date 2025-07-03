@@ -19,9 +19,14 @@ namespace ClusterManagement.Controllers
         /// Henter alle meldinger som har denne id-en
         /// Henter altså ut en spesifik melding
         [HttpGet("{id}")]
-        public Message GetMessage(Guid id)
+        public async Task<IActionResult> GetMessage(Guid id)
         {
-            return _messageService.GetMessageById(id);
+            var message = await _messageService.GetMessageByIdAsync(id);
+            if (message == null)
+            {
+                return NotFound();
+            }
+            return Ok(message);
         }
         /// <summary>
         /// Henter alle meldinger som er "sendt" til denne id-en
@@ -32,9 +37,9 @@ namespace ClusterManagement.Controllers
         /// <param name="id">Guid-en til mottakeren</param>
         /// <returns>En liste med meldinger som er sendt til denne id-en</returns>
         [HttpGet("to/{id}")]
-        public List<Message> GetMessagesTo(Guid id)
+        public async Task<List<Message>> GetMessagesTo(Guid id)
         {
-            return _messageService.GetMessagesTo(id);
+            return await _messageService.GetMessagesToAsync(id);
         }
         /// <summary>
         /// Henter alle meldinger som er "sendt" fra denne id-en
@@ -45,9 +50,9 @@ namespace ClusterManagement.Controllers
         /// <param name="id">Guid-en til avsenderen</param>
         /// <returns>En liste med meldinger som er sendt fra denne id-en</returns>
         [HttpGet("from/{id}")]
-        public List<Message> GetMessagesFrom(Guid id)
+        public async Task<List<Message>> GetMessagesFrom(Guid id)
         {
-            return _messageService.GetMessagesFrom(id);
+            return await _messageService.GetMessagesFromAsync(id);
         }
         /// <summary>
         /// Sender en melding fra en avsender til en mottaker
@@ -55,7 +60,7 @@ namespace ClusterManagement.Controllers
         /// Det man vil si i meldingen ligger i felteet "Text"
         /// </summary>
         [HttpPost("send")]
-        public void SendMessage([FromBody] Message message)
+        public async Task SendMessage([FromBody] Message message)
         {
 
         Message newMessage = new Message(
@@ -64,15 +69,15 @@ namespace ClusterManagement.Controllers
             about: message.About,
             content: message.Content
         );
-            _messageService.SendMessage(newMessage);
+            await _messageService.SendMessageAsync(newMessage);
         }
         /// <summary>
         /// Henter alle meldinger som er sendt til en mottaker som omhandler en spesifikk OneWayOpportunity
         /// </summary>
         [HttpGet("{toId}/{aboutId}")]
-        public List<Message> GetMessagesToAbout(Guid toId, Guid aboutId)
+        public async Task<List<Message>> GetMessagesToAbout(Guid toId, Guid aboutId)
         {
-            return _messageService.GetMessagesToAbout(toId, aboutId);
+            return await _messageService.GetMessagesToAboutAsync(toId, aboutId);
         }
 
     }

@@ -11,29 +11,29 @@ public class MessageService : IMessageService
         _messageRepository = messageRepository;
     }
 
-    public Message GetMessageById(Guid id)
+    public async Task<Message> GetMessageByIdAsync(Guid id)
     {
-        return _messageRepository.GetMessageById(id);
+        return await _messageRepository.GetMessageByIdAsync(id);
     }
 
-    public List<Message> GetMessagesTo(Guid id)
+    public async Task<List<Message>> GetMessagesToAsync(Guid id)
     {
-        return _messageRepository.GetMessagesTo(id);
+        return await _messageRepository.GetMessagesToAsync(id);
     }
 
-    public List<Message> GetMessagesFrom(Guid id)
+    public async Task<List<Message>> GetMessagesFromAsync(Guid id)
     {
-        return _messageRepository.GetMessagesFrom(id);
+        return await _messageRepository.GetMessagesFromAsync(id);
     }
 
-    public void SendMessage(Message message)
+    public async Task SendMessageAsync(Message message)
     {
-        _messageRepository.SendMessage(message);
+        await _messageRepository.SendMessageAsync(message);
     }
 
-    public List<Message> GetMessagesToAbout(Guid to, Guid about)
+    public async Task<List<Message>> GetMessagesToAboutAsync(Guid to, Guid about)
     {
-        return _messageRepository.GetMessagesToAbout(to, about);
+        return await _messageRepository.GetMessagesToAboutAsync(to, about);
     }
 }
 

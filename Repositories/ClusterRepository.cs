@@ -1,4 +1,5 @@
 using ClusterManagement.Models;
+using Microsoft.EntityFrameworkCore;
 namespace ClusterManagement.Repositories;
 public class ClusterRepository : IClusterRepository
 {
@@ -14,7 +15,7 @@ public class ClusterRepository : IClusterRepository
     }
     public async Task<IEnumerable<Cluster>> GetAllClustersAsync()
     {
-        var clusters = _context.Clusters.ToList();
+        var clusters = await _context.Clusters.ToListAsync();
         return clusters;
     }
 }

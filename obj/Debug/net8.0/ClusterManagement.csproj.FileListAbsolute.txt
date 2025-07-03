@@ -286,3 +286,4 @@
 /Users/hilmar/innafor/egen/ClusterManagement/bin/Debug/net8.0/NSwag.Generation.dll
 /Users/hilmar/innafor/egen/ClusterManagement/bin/Debug/net8.0/NSwag.Generation.AspNetCore.dll
 /Users/hilmar/innafor/egen/ClusterManagement/bin/Debug/net8.0/YamlDotNet.dll
+/Users/hilmar/innafor/egen/ClusterManagement/obj/Debug/net8.0/ClusterManagement.sourcelink.json

@@ -1,7 +1,8 @@
 using ClusterManagement.Models;
+using Microsoft.EntityFrameworkCore;
 namespace ClusterManagement.Repositories;
 
-public class  ClusterUserRepository : IClusterUserRepository
+public class ClusterUserRepository : IClusterUserRepository
 {
     private readonly ClusterContext _context;
     public ClusterUserRepository(ClusterContext context)
@@ -14,13 +15,13 @@ public class  ClusterUserRepository : IClusterUserRepository
     }
     public async Task<IEnumerable<ClusterUser>> GetAllClusterUsersAsync()
     {
-        return _context.ClusterUsers.ToList();
+        return await _context.ClusterUsers.ToListAsync();
     }
     public async Task<IEnumerable<ClusterUser>> GetUsersByClusterIdAsync(Guid clusterId)
     {
-        return _context.ClusterUsers
+        return await _context.ClusterUsers
             .Where(cu => cu.Cluster.Id == clusterId)
-            .ToList();
+            .ToListAsync();
     }
 }
 
