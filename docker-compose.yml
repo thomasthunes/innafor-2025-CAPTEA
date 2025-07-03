@@ -1,0 +1,28 @@
+services:
+  web:
+    build: ./ClusterManagement/
+    command: dotnet run --launch-profile docker
+    volumes:
+      - ./ClusterManagement:/usr/src/app
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+    ports:
+      - 5164:5164
+    depends_on:
+      - db
+  db:
+    image: postgres:16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   ports:
+  #     - 5554:80
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: "marius@slipper.no"
+  #     PGADMIN_DEFAULT_PASSWORD: "postgres"
+
+volumes:
+  postgres_data:

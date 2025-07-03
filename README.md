@@ -1,4 +1,3 @@
-# innafor-2025
 # Cluster Management API
 Her burde det stå noe på norsk om in
 ## Prerequisites
@@ -20,7 +19,7 @@ Choose one of the following setup methods:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd ClusterManagement
+   cd egen
    ```
 
 2. **Start the application**
@@ -47,7 +46,7 @@ Choose one of the following setup methods:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd egiClusterManagement
+   cd egen
    ```
 
 2. **Setup PostgreSQL Database**
