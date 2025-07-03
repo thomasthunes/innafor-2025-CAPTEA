@@ -19,7 +19,7 @@ Choose one of the following setup methods:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd egen
+   cd innafor-2025
    ```
 
 2. **Start the application**
@@ -46,7 +46,7 @@ Choose one of the following setup methods:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd egen
+   cd innafor-2025
    ```
 
 2. **Setup PostgreSQL Database**
