@@ -12,6 +12,13 @@ public class AdminController
     [HttpPost]
     public Task Seed()
     {
+        _context.Clusters.RemoveRange(_context.Clusters);
+        _context.ClusterUsers.RemoveRange(_context.ClusterUsers);
+        _context.OneWayInOpportunities.RemoveRange(_context.OneWayInOpportunities);
+        _context.Messages.RemoveRange(_context.Messages);
+        //patent kontor?
+        //gjær spesialist
+        //gravemaskin ekspert
         var cluster1 = new Cluster
         {
             Name = "Vestlands Business Akademi",
@@ -64,6 +71,12 @@ public class AdminController
             DateOfFoundation = new DateTime(2010, 5, 15, 0, 0, 0, DateTimeKind.Utc),
             MainContact = null,
         };
+        _context.Clusters.AddRange(cluster1, cluster2, cluster3, cluster4);
+        _context.SaveChanges();
+        _context.Entry<Cluster>(cluster1).Reload();
+        _context.Entry<Cluster>(cluster2).Reload();
+        _context.Entry<Cluster>(cluster3).Reload();
+        _context.Entry<Cluster>(cluster4).Reload();
         var vbaClusterUser1 = new ClusterUser
         {
             Cluster = cluster1,
@@ -141,6 +154,16 @@ public class AdminController
         cluster3.MainContact = clusterUser3.Id;
         cluster4.MainContact = clusterUser4.Id;
         
+        // joga med geiter
+        //klesapponement
+        //Ar briller får det til å se ut som det er tomt på bussen
+        //beskyttelse mot 
+        // 
+        // Hjemmemanikyr og pedikyr 
+        // paraply as a service paraply
+        // slkrem as a service
+        // varmt fra jobb jakkehotell? bysykkel
+        // 
         var oneWayInOpportunity1 = new OneWayInOpportunity
         {
             Cluster = cluster1,
@@ -167,9 +190,9 @@ public class AdminController
         {
             Cluster = cluster3,
             Title = "AI-drevet kundeservice",
-            Description = "Vi har utviklet en AI-løsning som kan håndtere kundeservicehenvendelser automatisk. Dette vil redusere ventetiden for kundene og frigjøre ressurser for selskapet.",
+            Description = "Vi har utviklet en AI-løsning som kan håndtere kundeservicehenvendelser automatisk. Løsningen vil uansett hva slags spørsmål kunden har, svare ut at det ikke er noe vi kan hjelpe dem med. Dette vil redusere ventetiden for kundene og frigjøre ressurser for selskapet.",
             IsClosed = false,
-            CustomerName = "Tech Solutions AS",
+            CustomerName = "Dnb",
             SubmittedOn = DateTime.UtcNow,
             LastChangedOn = DateTime.UtcNow,
             AssignedTo = clusterUser3,
@@ -208,17 +231,11 @@ public class AdminController
             AssignedTo = nordicinnovationUser2,
         };
 
-
-
-        _context.Clusters.RemoveRange(_context.Clusters);
-        _context.Clusters.AddRange(cluster1, cluster2, cluster3, cluster4);
-        _context.ClusterUsers.RemoveRange(_context.ClusterUsers);
         _context.ClusterUsers.AddRange(
             vbaClusterUser1, vbaClusterUser2, vbaClusterUser3,
             nordicinnovationUser1, nordicinnovationUser2, nordicinnovationUser3,
             clusterUser3, clusterUser4
         );
-        _context.OneWayInOpportunities.RemoveRange(_context.OneWayInOpportunities);
         _context.OneWayInOpportunities.AddRange(
             oneWayInOpportunity1, oneWayInOpportunity2, oneWayInOpportunity3,
             oneWayInOpportunity4, oneWayInOpportunity5, OneWayInOpportunity6

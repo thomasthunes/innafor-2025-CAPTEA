@@ -28,6 +28,9 @@ namespace ClusterManagement.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("ClusterDescription")
+                        .HasColumnType("text");
+
                     b.Property<string>("ClusterPurpose")
                         .HasColumnType("text");
 
@@ -40,6 +43,9 @@ namespace ClusterManagement.Migrations
                     b.Property<string>("EmailAddress")
                         .HasColumnType("text");
 
+                    b.Property<string>("Industry")
+                        .HasColumnType("text");
+
                     b.Property<string>("IndustryCode")
                         .HasColumnType("text");
 
@@ -50,6 +56,9 @@ namespace ClusterManagement.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("OrganizationNumber")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Services")
                         .HasColumnType("text");
 
                     b.Property<string>("Telephone")

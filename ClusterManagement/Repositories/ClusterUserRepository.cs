@@ -11,15 +11,15 @@ public class ClusterUserRepository : IClusterUserRepository
     }
     public async Task<ClusterUser> GetUserByIdAsync(Guid userId)
     {
-        return await _context.ClusterUsers.FindAsync(userId);
+        return await _context.ClusterUsers.Include(cu=>cu.Cluster).Where(e=> e.Id == userId). SingleAsync();
     }
     public async Task<IEnumerable<ClusterUser>> GetAllClusterUsersAsync()
     {
-        return await _context.ClusterUsers.ToListAsync();
+        return await _context.ClusterUsers.Include(cu =>cu.Cluster).ToListAsync();
     }
     public async Task<IEnumerable<ClusterUser>> GetUsersByClusterIdAsync(Guid clusterId)
     {
-        return await _context.ClusterUsers
+        return await _context.ClusterUsers.Include(cu => cu.Cluster)
             .Where(cu => cu.Cluster.Id == clusterId)
             .ToListAsync();
     }

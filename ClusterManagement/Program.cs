@@ -21,6 +21,15 @@ public class Program
         {
             options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
         });
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(policy =>
+            {
+                policy.AllowAnyOrigin()
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+            });
+        });
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddControllers();
         builder.Services.AddOpenApiDocument();
@@ -30,6 +39,7 @@ public class Program
             var dbContext = scope.ServiceProvider.GetRequiredService<ClusterManagement.Models.ClusterContext>();
             dbContext.Database.Migrate();
         }
+        app.UseCors();
         app.MapControllers();
         app.UseSwaggerUi(c =>
         { 

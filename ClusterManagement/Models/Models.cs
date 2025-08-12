@@ -37,6 +37,17 @@ public class Cluster
     public string? IndustryCode { get; set; }
     public string? ClusterPurpose { get; set; }
     public string? ClusterVision { get; set; }
+    
+    public string? ClusterDescription { get; set; }
+    public string? Services { get; set; }
+    public string? Industry { get; set; }
+    // hvaslags aktør er det?
+    // tjeneste typer
+    //     bransje
+    // kriterier
+    // tjenestekatalog??
+    // hvilket fylke
+
     public DateTime? DateOfFoundation { get; set; }
     /// <summary>
     /// guid of the clusterUser that is the main contact

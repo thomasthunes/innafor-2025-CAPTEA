@@ -37,8 +37,8 @@ public class Message
     /// Guid-en til OneWayOpportunity-en som meldingen handler om
     /// </summary>
     /// <remarks>
-    /// Dette feltet kan brukes til å knytte meldingen til en spesifikk
-    /// OneWayOpportunity
+    /// Dette feltet kan brukes til å knytte meldingen til noe. Kanskje en spesifikk
+    /// OneWayOpportunity, bare et "tema", en annen melding, eller kanskje en bedrift
     /// </remarks>
     public Guid About { get; set; }
     /// <summary>

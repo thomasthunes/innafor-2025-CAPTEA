@@ -1,4 +1,3 @@
-
 # Build Stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /source
@@ -11,6 +10,7 @@ COPY . .
 # WORKDIR /app
 # COPY --from=build /app ./
 
+RUN dotnet tool install --global dotnet-ef
 EXPOSE 5164
 
 # ENTRYPOINT ["dotnet", "ClusterManagement.dll"]
