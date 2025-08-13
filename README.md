@@ -24,10 +24,12 @@ Choose one of the following setup methods:
 
 2. **Start the application**
    ```bash
+   docker-compose build
    docker-compose up -d
    ```
 
    This will:
+   - Rebuild the images (this is required so the backend image is updated with your changes to the code)
    - Start a PostgreSQL database container
    - Build and run the ASP.NET Core application
    - Automatically apply database migrations
