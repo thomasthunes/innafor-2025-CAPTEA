@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClusterManagement.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64ad52ddba8850e0578bbb3508c5b0f31a39aa1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de91b4a2fc10b9ac2607fa4f244739e0b5c095c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClusterManagement.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClusterManagement.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

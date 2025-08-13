@@ -10110,19 +10110,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/hilmar/.nuget/packages/": {}
+    "/Users/pal.vambheim/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
+      "projectUniqueName": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
       "projectName": "ClusterManagement.Tests",
-      "projectPath": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
-      "packagesPath": "/Users/hilmar/.nuget/packages/",
-      "outputPath": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/obj/",
+      "projectPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
+      "packagesPath": "/Users/pal.vambheim/.nuget/packages/",
+      "outputPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/hilmar/.nuget/NuGet/NuGet.Config"
+        "/Users/pal.vambheim/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -10134,8 +10134,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj": {
-              "projectPath": "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj"
+            "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj": {
+              "projectPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj"
             }
           }
         }
@@ -10201,7 +10201,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj": {}
+    "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj": {}
   },
   "projects": {
-    "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj": {
+    "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
+        "projectUniqueName": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
         "projectName": "ClusterManagement.Tests",
-        "projectPath": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
-        "packagesPath": "/Users/hilmar/.nuget/packages/",
-        "outputPath": "/Users/hilmar/innafor/egen/ClusterManagement.Tests/obj/",
+        "projectPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/ClusterManagement.Tests.csproj",
+        "packagesPath": "/Users/pal.vambheim/.nuget/packages/",
+        "outputPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hilmar/.nuget/NuGet/NuGet.Config"
+          "/Users/pal.vambheim/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj": {
-                "projectPath": "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj"
+              "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj": {
+                "projectPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj"
               }
             }
           }
@@ -93,21 +93,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj": {
+    "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj",
+        "projectUniqueName": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj",
         "projectName": "ClusterManagement",
-        "projectPath": "/Users/hilmar/innafor/egen/ClusterManagement/ClusterManagement.csproj",
-        "packagesPath": "/Users/hilmar/.nuget/packages/",
-        "outputPath": "/Users/hilmar/innafor/egen/ClusterManagement/obj/",
+        "projectPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/ClusterManagement.csproj",
+        "packagesPath": "/Users/pal.vambheim/.nuget/packages/",
+        "outputPath": "/Users/pal.vambheim/Desktop/Innaforuka/innafor-2025-CAPTEA/ClusterManagement/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hilmar/.nuget/NuGet/NuGet.Config"
+          "/Users/pal.vambheim/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -184,15 +184,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
+              "version": "[8.0.19, 8.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.osx-arm64",
-              "version": "[8.0.17, 8.0.17]"
+              "version": "[8.0.19, 8.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.17, 8.0.17]"
+              "version": "[8.0.19, 8.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -203,7 +203,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
